@@ -7,6 +7,7 @@ body {
     max-width: 800px;
     max-height: 400px;
 }
+
 /* img {
     background-color: #ffcf564c;
 }
@@ -85,3 +86,9 @@ img {
 .button-55:focus {
     box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
+
+/* @media only screen and (max-device-width: 480px) {
+    .desktop {
+        display: none;
+    }
+} */

@@ -1,4 +1,10 @@
-import { Typography, Button, CircularProgress, Card } from "@mui/material";
+import {
+    Typography,
+    Button,
+    CircularProgress,
+    Card,
+    Container,
+} from "@mui/material";
 import { Box } from "@mui/system";
 import { decode } from "html-entities";
 import { useState, useEffect } from "react";
@@ -85,35 +91,39 @@ const Questions = () => {
     };
 
     return (
-        <Box m={2} pt={3}>
-            <Typography variant="h5">Question {questionList + 1}</Typography>
-            <Card sx={{ boxShadow: 1, backgroundColor: "#b47eb349" }}>
-                <Typography m={3} variant="h4">
-                    {decode(response.results[questionList].question)}
+        <Container>
+            <Box m={2} pt={3}>
+                <Typography variant="h5">
+                    Question {questionList + 1}
                 </Typography>
-            </Card>
-            {options.map((data, id) => (
-                <Box id="my-class" key={id} mt={2}>
-                    <Button
-                        variant="outlined"
-                        sx={{
-                            height: 50,
-                            minWidth: 500,
-                            boxShadow: 1,
-                            fontSize: "20px",
-                        }}
-                        onClick={handleClick}
-                    >
-                        {decode(data)}
-                    </Button>
+                <Card sx={{ boxShadow: 1, backgroundColor: "#b47eb349" }}>
+                    <Typography m={3} variant="h4">
+                        {decode(response.results[questionList].question)}
+                    </Typography>
+                </Card>
+                {options.map((data, id) => (
+                    <Box id="my-class" key={id} mt={2}>
+                        <Button
+                            variant="outlined"
+                            sx={{
+                                height: 50,
+                                minWidth: 500,
+                                boxShadow: 1,
+                                fontSize: "20px",
+                            }}
+                            onClick={handleClick}
+                        >
+                            {decode(data)}
+                        </Button>
+                    </Box>
+                ))}
+                <Box>
+                    <Typography mt={5} variant="h5">
+                        Score: {score} / {response.results.length}{" "}
+                    </Typography>
                 </Box>
-            ))}
-            <Box>
-                <Typography mt={5} variant="h5">
-                    Score: {score} / {response.results.length}{" "}
-                </Typography>
             </Box>
-        </Box>
+        </Container>
     );
 };
 
