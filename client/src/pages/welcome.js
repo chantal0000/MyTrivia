@@ -1,6 +1,6 @@
 import { Box } from "@mui/system";
 import { useHistory } from "react-router";
-import { Button, keyframes, Typography, Paper, Container } from "@mui/material";
+import { Button, keyframes, Typography, Paper, Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 
 const Welcome = () => {
@@ -12,7 +12,7 @@ const Welcome = () => {
 
     return (
         <>
-            <Container sx={{ margin: "auto" }}>
+            <Grid>
                 <form onSubmit={handleSubmit}>
                     <Box mt={3}>
                         <img
@@ -24,17 +24,18 @@ const Welcome = () => {
                         <Button
                             color="primary"
                             variant="contained"
-                            sx={{
-                                height: 50,
-                                minWidth: 400,
-                            }}
+                            sx={
+                                {
+                                    // height: 50,
+                                }
+                            }
                             type="submit"
                         >
                             LET'S PLAY
                         </Button>
                     </Box>
-                </form>{" "}
-            </Container>
+                </form>
+            </Grid>
         </>
     );
 };

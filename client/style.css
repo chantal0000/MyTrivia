@@ -4,8 +4,9 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 #welcome-img {
-    max-width: 800px;
-    max-height: 400px;
+    max-width: 600px;
+    max-height: 300px;
+    object-fit: contain;
 }
 
 /* img {

@@ -92,7 +92,7 @@ const Questions = () => {
 
     return (
         <Container>
-            <Box m={2} pt={3}>
+            <Box>
                 <Typography variant="h5">
                     Question {questionList + 1}
                 </Typography>
@@ -105,9 +105,10 @@ const Questions = () => {
                     <Box id="my-class" key={id} mt={2}>
                         <Button
                             variant="outlined"
+                            padding={5}
                             sx={{
                                 height: 50,
-                                minWidth: 500,
+                                // minWidth: 500,
                                 boxShadow: 1,
                                 fontSize: "20px",
                             }}

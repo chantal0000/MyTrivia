@@ -3,16 +3,23 @@ import Setup from "./pages/setup";
 import Questions from "./pages/questions";
 import FinalView from "./pages/final-view";
 import Welcome from "./pages/welcome";
-import { Container, Box, Typography } from "@mui/material";
+import { Container, Box } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { purple } from "@mui/material/colors";
 
 const theme = createTheme({
     palette: {
         primary: {
             main: "#b47eb3",
         },
-        // secondary: "#ffcf56",
+        breakpoints: {
+            values: {
+                xs: 0,
+                sm: 600,
+                md: 900,
+                lg: 1200,
+                xl: 1536,
+            },
+        },
     },
     typography: {
         fontFamily: "Quicksand",
