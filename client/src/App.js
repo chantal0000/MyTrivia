@@ -10,9 +10,9 @@ import { purple } from "@mui/material/colors";
 const theme = createTheme({
     palette: {
         primary: {
-            main: "#e9388c",
+            main: "#b47eb3",
         },
-        secondary: purple,
+        // secondary: "#ffcf56",
     },
     typography: {
         fontFamily: "Quicksand",
@@ -31,16 +31,9 @@ export default function App() {
                     <Box textAlign="center" mt={5}>
                         <Switch>
                             <Route exact path="/">
-                                <Typography
-                                    variant="h1"
-                                    fontWeight="bold"
-                                ></Typography>
                                 <Welcome />
                             </Route>
                             <Route path="/setup">
-                                <Typography variant="h1" fontWeight="bold">
-                                    let's get started
-                                </Typography>
                                 <Setup />
                             </Route>
                             <Route path="/questions">

@@ -33,7 +33,7 @@ const Fields = (props) => {
     };
 
     return (
-        <Box mt={3} width="100%">
+        <Box mt={3} sx={{ boxShadow: 1 }}>
             <FormControl fullWidth>
                 <InputLabel>{label}</InputLabel>
                 <Select value={value} label={label} onChange={handleChange}>

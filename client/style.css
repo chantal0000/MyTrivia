@@ -1,5 +1,5 @@
 body {
-    background-color: ghostwhite;
+    background-color: #ccdcea90;
 }
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
@@ -7,3 +7,10 @@ body {
     max-width: 800px;
     max-height: 400px;
 }
+/* img {
+    background-color: #ffcf564c;
+}
+
+img {
+    background-color: #b47eb349;
+} */

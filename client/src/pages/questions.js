@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import useAxios from "../hooks/axios";
 import { handleScoChange } from "../redux/actions";
+import { borders } from "@mui/system";
 
 // generate random Number between 0 and max number
 const getRandomNumber = (max) => {
@@ -41,6 +42,7 @@ const Questions = () => {
     const { response, loading } = useAxios({ url: apiUrl });
     const [questionList, setQuestionList] = useState(0);
     const [options, setOptions] = useState([]);
+
     console.log("options", options);
 
     useEffect(() => {
@@ -56,6 +58,8 @@ const Questions = () => {
             );
             setOptions(answers);
         }
+        // timer?
+
         //list will change everytime button is clicked
     }, [response, questionList]);
 
@@ -82,38 +86,36 @@ const Questions = () => {
     };
 
     return (
-        <Card>
-            <Box>
-                <Typography fontWeight="bold" variant="h4" color="secondary">
-                    Question {questionList + 1}
-                </Typography>
-                <Typography variant="h4" color="primary" sx={{}}>
+        <Box m={2} pt={3}>
+            <Typography variant="h5">Question {questionList + 1}</Typography>
+            <Card sx={{ boxShadow: 1, backgroundColor: "#b47eb349" }}>
+                <Typography m={3} variant="h4">
                     {decode(response.results[questionList].question)}
                 </Typography>
-
-                {options.map((data, id) => (
-                    <Box id="my-class" key={id} mt={2}>
-                        <Button
-                            color="primary"
-                            variant="outlined"
-                            sx={{
-                                height: 50,
-                                minWidth: 400,
-                            }}
-                            onClick={handleClick}
-                        >
-                            {decode(data)}
-                        </Button>
-                    </Box>
-                ))}
-
-                <Box>
-                    <Typography>
-                        Score: {score} / {response.results.length}{" "}
-                    </Typography>
+            </Card>
+            {options.map((data, id) => (
+                <Box id="my-class" key={id} mt={2}>
+                    <Button
+                        variant="outlined"
+                        sx={{
+                            height: 50,
+                            minWidth: 500,
+                            boxShadow: 1,
+                            fontSize: "20px",
+                        }}
+                        onClick={handleClick}
+                    >
+                        {decode(data)}
+                    </Button>
                 </Box>
+            ))}
+            <Box>
+                <Typography mt={5} variant="h5">
+                    Score: {score} / {response.results.length}{" "}
+                </Typography>
             </Box>
-        </Card>
+        </Box>
+        // </Card>
     );
 };
 

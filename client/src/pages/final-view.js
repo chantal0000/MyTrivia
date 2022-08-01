@@ -1,10 +1,10 @@
-import { Box } from "@mui/system";
-import { Typography, Button, Card } from "@mui/material";
+// import { Box } from "@mui/system";
+// import { Typography, Button, Card } from "@mui/material";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import { handleScoChange, handleAmountChange } from "../redux/actions";
-// import Confi from "./confetti";
+
 const FinalView = () => {
     const { score } = useSelector((state) => state);
     const dispatch = useDispatch();
@@ -16,27 +16,52 @@ const FinalView = () => {
     };
 
     return (
-        <Card>
-            <Box>
-                <Typography>Your Score {score}</Typography>
-                <Button
-                    onClick={handlePlayAgain}
-                    // variant="contained"
-                    // color="secondary"
-                    // size="small"
-                    sx={{
-                        backgroundColor: "primary.dark",
-                        "&:hover": {
-                            backgroundColor: "primary.main",
-                            opacity: [0.9, 0.8, 0.7],
-                        },
-                    }}
-                >
-                    play again
-                </Button>
-            </Box>
-        </Card>
+        <div>
+            <h1> You answered {score} correctly!</h1>
+            <button type="button" onClick={handlePlayAgain}>
+                play again
+            </button>
+            {/* <Button
+                onClick={handlePlayAgain}
+                variant="contained"
+                color="secondary"
+                mt={5}
+            >
+                play again
+            </Button> */}
+        </div>
+        // <Card>
+        //     <Box mt={10}>
+        //         <Typography variant="h1">
+
+        //         </Typography>
+
+        //         <Button
+        //             onClick={handlePlayAgain}
+        //             variant="contained"
+        //             color="secondary"
+        //             mt={5}
+        //         >
+        //             play again
+        //         </Button>
+        //     </Box>
+        // </Card>
     );
 };
 
 export default FinalView;
+
+//  <Card>
+//      <Box mt={10}>
+//          <Typography variant="h1">You answered {score} correctly!</Typography>
+
+//          <Button
+//              onClick={handlePlayAgain}
+//              variant="contained"
+//              color="secondary"
+//              mt={5}
+//          >
+//              play again
+//          </Button>
+//      </Box>
+//  </Card>;

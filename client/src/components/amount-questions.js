@@ -10,7 +10,7 @@ const AmountQuestions = () => {
         dispatch(handleAmountChange(e.target.value));
     };
     return (
-        <Box mt={3} width="100%">
+        <Box mt={3} sx={{ boxShadow: 1 }}>
             <FormControl fullWidth>
                 <TextField
                     onChange={handleChange}
