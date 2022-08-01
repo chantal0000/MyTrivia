@@ -17,6 +17,7 @@ const AmountQuestions = () => {
                     variant="outlined"
                     label="Amount of Questions"
                     type="number"
+                    required
                 />
             </FormControl>
         </Box>

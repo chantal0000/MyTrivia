@@ -4,6 +4,9 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import { handleScoChange, handleAmountChange } from "../redux/actions";
+// import React, { Component } from "react";
+
+import ParticlesBg from "particles-bg";
 
 const FinalView = () => {
     const { score } = useSelector((state) => state);
@@ -16,36 +19,20 @@ const FinalView = () => {
     };
 
     return (
-        <div>
-            <h1> You answered {score} correctly!</h1>
-            <button type="button" onClick={handlePlayAgain}>
-                play again
-            </button>
-            {/* <Button
-                onClick={handlePlayAgain}
-                variant="contained"
-                color="secondary"
-                mt={5}
-            >
-                play again
-            </Button> */}
+        <div id="container">
+            <div id="content">
+                <h1 id="score"> You answered {score} questions correctly!</h1>
+                <button
+                    className="button-55"
+                    role="button"
+                    type="button"
+                    onClick={handlePlayAgain}
+                >
+                    PLAY AGAIN
+                </button>
+            </div>
+            <ParticlesBg type="lines" bg={true} color="#d6d6ff" num={100} />
         </div>
-        // <Card>
-        //     <Box mt={10}>
-        //         <Typography variant="h1">
-
-        //         </Typography>
-
-        //         <Button
-        //             onClick={handlePlayAgain}
-        //             variant="contained"
-        //             color="secondary"
-        //             mt={5}
-        //         >
-        //             play again
-        //         </Button>
-        //     </Box>
-        // </Card>
     );
 };
 

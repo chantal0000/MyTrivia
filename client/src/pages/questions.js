@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import useAxios from "../hooks/axios";
 import { handleScoChange } from "../redux/actions";
-import { borders } from "@mui/system";
 
 // generate random Number between 0 and max number
 const getRandomNumber = (max) => {
@@ -115,7 +114,6 @@ const Questions = () => {
                 </Typography>
             </Box>
         </Box>
-        // </Card>
     );
 };
 
