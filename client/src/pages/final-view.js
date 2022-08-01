@@ -15,13 +15,13 @@ const FinalView = () => {
     const handlePlayAgain = () => {
         dispatch(handleScoChange(0));
         dispatch(handleAmountChange());
-        history.push("/setup");
+        history.push("/");
     };
 
     return (
         <div id="container">
             <div id="content">
-                <h1 id="score"> You answered {score} questions correctly!</h1>
+                <h1 id="score"> Your Score is: {score} </h1>
                 <button
                     className="button-55"
                     role="button"

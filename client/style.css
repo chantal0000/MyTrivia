@@ -19,12 +19,13 @@ img {
     font-family: "Quicksand";
     background-color: plum;
     width: 400px;
-    height: 400px;
+    height: 300px;
     background-color: #edf3f990;
     display: flex;
     flex-direction: column;
-    padding-top: 40px;
+    padding: auto;
     margin: auto;
+    margin-top: 100px;
 }
 #score {
     margin-top: 60px;
@@ -32,7 +33,7 @@ img {
     align-items: center;
 }
 #container {
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +45,7 @@ img {
 
 /* CSS */
 .button-55 {
-    font-family: Quicksand;
+    font-family: "Quicksand";
     border-color: #b47eb3;
     align-self: center;
     background-color: #b47eb3;
